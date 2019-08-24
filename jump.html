@@ -2,10 +2,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
 <title>网页跳转</title>
 <script>
-var ifmurl=decodeURI(location.search);
+var ifmurl=decodeURI(location.search).substring(1)+(location.hash);
 var paramsString = location.search
 var searchParams = new URLSearchParams(paramsString);
-ifmurl=searchParams.get("url").substring(1)+(location.hash);
+if(searchParams.get("exv")){
+    ifmurl='https://share.exview.ml/'+(location.hash);
+}
+
 // 'http://c.pc.qq.com/middlem.html?pfurl='
 function isWeiXin() {
     var ua = navigator.userAgent.toLowerCase();
