@@ -7,6 +7,8 @@ var paramsString = location.search
 var searchParams = new URLSearchParams(paramsString);
 if(searchParams.get("exv")){
     ifmurl='https://share.exview.ml/'+(location.hash);
+}else if(searchParams.get("ppcat")){
+    ifmurl='https://t.cn/A6PnUdAl'+(location.hash);
 }
 
 // 'http://c.pc.qq.com/middlem.html?pfurl='
